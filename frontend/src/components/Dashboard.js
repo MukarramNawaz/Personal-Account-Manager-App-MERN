@@ -3,7 +3,6 @@ import '../App.css'
 import { toast } from 'react-toastify';
 
 import Header from './Header';
-import axios from 'axios';
 
 function Dashboard() {
     const [text, setText] = useState('');
@@ -19,7 +18,15 @@ function Dashboard() {
       try {
         let userId = localStorage.getItem('userId');
         userId = JSON.parse(userId);
-      const {data} = await axios.get(`http://localhost:5000/${userId}`);
+      const response = await fetch(`http://localhost:5000/${userId}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+        
+      const data = await response.json();
       setUser(data);
       setTransactions(data.transactions);
       setBalance(data.accountBalance);
