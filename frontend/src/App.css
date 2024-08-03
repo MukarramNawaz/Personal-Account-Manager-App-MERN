@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 10px auto;
+  max-width: 500px; 
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #686868;
+
+}
+
+.Header {
+  background-color: #333;
+  color: #000000;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.Header h1 {
+  margin: 0;
+  font-family: eczar, sans-serif;
+}
+
+
+.AccountInfo {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: center;
+}
+
+.AccountInfo h2 {
+  margin-top: 0;
+  font-size: 24px;
+  font-family: eczar, sans-serif;
+
+}
+.accountBalance {
+  font-size: 24px;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.income {
+  color: green;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  margin-right: 3%;
+}
+
+.expenses {
+  color: red;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+}
+
+.TransactionForm {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.TransactionForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.TransactionForm input[type="text"], input[type="number"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.income_button
+{
+  background-color: rgb(60, 216, 73);
+   box-shadow: rgb(4, 92, 26) 0px 4px 0px 0px;
+   position: relative;
+   border-radius: 5px;
+   padding: 15px;
+   background-repeat: no-repeat;
+   cursor: pointer;
+   margin-right: 50px;
+   box-sizing: border-box;
+   max-width: 250px;
+   height: 49px;
+   color: #000000;
+   border: none;
+   font-size: 20px;
+   transition: all 0.3s ease-in-out;
+   z-index: 1;
+   overflow: hidden;
+}
+
+.expense_button
+{
+  background-color: rgb(255, 40, 25);
+   box-shadow: rgb(124, 13, 13) 0px 4px 0px 0px;
+   position: relative;
+   border-radius: 5px;
+   padding: 15px;
+   background-repeat: no-repeat;
+   cursor: pointer;
+   margin-right: 50px;
+   box-sizing: border-box;
+   max-width: 250px;
+   height: 49px;
+   color: #000000;
+   border: none;
+   font-size: 20px;
+   transition: all 0.3s ease-in-out;
+   z-index: 1;
+   overflow: hidden;
+}
+  
+.TransactionHistory {
+  background-color: #ffc0c0;
+  padding: 20px;
+
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.TransactionHistory h2 {
+  margin-top: 0;
+}
+
+.TransactionHistory ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.TransactionHistory li {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #000000;
+}
+
+
+
+.TransactionHistory p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+}
+
+.login-container {
+  width: 300px;
+  margin: 50px auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #3e8e41;
+}
