@@ -1,6 +1,13 @@
 
 const User = require("../model/userModel");
 
+
+
+const homepage = async (req, res) => {
+
+    res.status(200).json("backend working");
+ 
+};
 //
 const registerUser = async (req, res) => {
   const { username, password } = req.body;
@@ -23,15 +30,6 @@ const registerUser = async (req, res) => {
   }
 };
 
-// fetching all Users
-// const getUsers = async (req, res) => {
-//     try {
-//         const Users = await User.find();
-//         res.status(200).json(Users);
-//     } catch (error) {
-//         res.status(500).json({msg: error.message});
-//     }
-// }
 
 
 const loginUser = async (req, res) => {
@@ -147,4 +145,4 @@ const updateUserData = async (req, res) => {
 }
 
 
-module.exports = { registerUser,loginUser, getUserData, updateUserIncome, updateUserExpense, updateUserData}
+module.exports = { homepage, registerUser,loginUser, getUserData, updateUserIncome, updateUserExpense, updateUserData}
