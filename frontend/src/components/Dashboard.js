@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import '../App.css'
 import { toast } from 'react-toastify';
 const dotenv = require("dotenv").config();
-const backend_url = process.env.BACKEDND_URL;
+const BACKEDND_URL = process.env.BACKEDND_URL;
 import Header from './Header';
 
 function Dashboard() {
@@ -19,7 +19,7 @@ function Dashboard() {
       try {
         let userId = localStorage.getItem('userId');
         userId = JSON.parse(userId);
-      const response = await fetch(`${backend_url}/${userId}`,
+      const response = await fetch(`${BACKEDND_URL}/${userId}`,
         {
           method: 'GET',
           headers: {
@@ -69,7 +69,7 @@ function Dashboard() {
         const updatedIncome = income + Math.abs(amount) ;
 
         // udating in MB
-        const response = await fetch(`${backend_url}/${user._id}/income`, {
+        const response = await fetch(`${BACKEDND_URL}/${user._id}/income`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ function Dashboard() {
       const updatedExpenses = expenses + Math.abs(amount) ;
 
       // udating in MB
-      const response = await fetch(`${backend_url}/${user._id}/expense`, {
+      const response = await fetch(`${BACKEDND_URL}/${user._id}/expense`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ function Dashboard() {
 //     const updatedExpenses = amount<0 ? expenses + Math.abs(amount) : expenses;
 //     const updatedIncome = amount>0 ? income + Math.abs(amount) : income;
 //     // udating in MB
-//     const response = await fetch(`${backend_url}/${user._id}/transection`, {
+//     const response = await fetch(`${BACKEDND_URL}/${user._id}/transection`, {
 //       method: 'PATCH',
 //       headers: {
 //         'Content-Type': 'application/json',
