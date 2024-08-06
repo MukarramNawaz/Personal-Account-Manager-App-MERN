@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-const BACKEDND_URL = process.env.BACKEDND_URL;
 import './CSS/loginRegisterPage.css'
 function Login() {
   const [username, setUsername] = useState('');
@@ -10,7 +9,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${BACKEDND_URL}/login`, {
+    const response = await fetch(`https://personal-account-manager-app-mern.vercel.app/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
