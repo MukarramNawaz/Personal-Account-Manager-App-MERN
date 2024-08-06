@@ -2,7 +2,8 @@ import React, { useState,useEffect } from 'react';
 import '../App.css'
 import { toast } from 'react-toastify';
 import Header from './Header';
-
+const dotenv = require("dotenv").config();
+const BACKEDND_URL = process.env.BACKEDND_URL;
 function Dashboard() {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
@@ -17,7 +18,7 @@ function Dashboard() {
       try {
         let userId = localStorage.getItem('userId');
         userId = JSON.parse(userId);
-      const response = await fetch(`https://personal-account-manager-app-mern.vercel.app/${userId}`,
+      const response = await fetch(`${BACKEDND_URL}/${userId}`,
         {
           method: 'GET',
           headers: {
