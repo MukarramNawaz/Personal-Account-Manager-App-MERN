@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 const dotenv = require("dotenv").config();
-const backend_url = process.env.BACKEDND_URL;
+const BACKEDND_URL = process.env.BACKEDND_URL;
 import './CSS/loginRegisterPage.css'
 function Login() {
   const [username, setUsername] = useState('');
@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('${backend_url}/login', {
+    const response = await fetch('${BACKEDND_URL}/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
