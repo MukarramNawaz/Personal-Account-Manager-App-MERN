@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+const dotenv = require("dotenv").config();
 const backend_url = process.env.BACKEDND_URL;
 import './CSS/loginRegisterPage.css'
 function Login() {
