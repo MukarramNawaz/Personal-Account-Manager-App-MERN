@@ -2,7 +2,6 @@ import React, { useState,useEffect } from 'react';
 import '../App.css'
 import { toast } from 'react-toastify';
 import Header from './Header';
-const dotenv = require("dotenv").config();
 const BACKEDND_URL = process.env.BACKEDND_URL;
 function Dashboard() {
     const [text, setText] = useState('');
