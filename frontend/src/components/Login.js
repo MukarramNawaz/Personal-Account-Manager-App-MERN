@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+const PORT = process.env.BACKEDND_URL;
 import './CSS/loginRegisterPage.css'
 function Login() {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:5000/login', {
+    const response = await fetch('${BACKEDND_URL}/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
