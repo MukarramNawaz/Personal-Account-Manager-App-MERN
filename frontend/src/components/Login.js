@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('${BACKEDND_URL}/login', {
+    const response = await fetch(`${BACKEDND_URL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
