@@ -10,7 +10,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`https://personal-account-manager-app-mern.vercel.app/register`, {
+    const response = await fetch('https://personal-account-manager-app-mern.vercel.app/register', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
